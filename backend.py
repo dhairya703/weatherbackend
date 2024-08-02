@@ -21,6 +21,10 @@ MONTH_NAMES = {
     12: "December"
 }
 
+@app.route('/')
+def index():
+    return "Welcome to the Weather API!"
+
 @app.route('/fetch_data', methods=['POST'])
 def fetch_data():
     city_id = request.json.get('city_id')
